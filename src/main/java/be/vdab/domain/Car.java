@@ -13,7 +13,7 @@ import javax.persistence.Id;
 public class Car {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String color;
@@ -57,5 +57,15 @@ public class Car {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "brand='" + brand + '\'' +
+                ", id=" + id +
+                ", color='" + color + '\'' +
+                ", model='" + model + '\'' +
+                '}';
     }
 }
