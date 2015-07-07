@@ -15,10 +15,10 @@ public class Car {
 
     private String color;
 
-    @OneToOne
+    @ManyToOne
     private CarMake make;
 
-    @OneToOne
+    @ManyToOne
     private CarModel model;
 
 //    private CarOwner owner;
@@ -30,11 +30,11 @@ public class Car {
     }
 
     //Getters & Setters
-    public String getMake() {
+    public CarMake getMake() {
         return make;
     }
 
-    public void setMake(String make) {
+    public void setMake(CarMake make) {
         this.make = make;
     }
 
@@ -51,6 +51,13 @@ public class Car {
     }
 
 
+    public CarModel getModel() {
+        return model;
+    }
+
+    public void setModel(CarModel model) {
+        this.model = model;
+    }
 
     //Other methods & Overrides
     @Override
