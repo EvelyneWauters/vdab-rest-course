@@ -28,8 +28,8 @@ insert into car_make (name, address_id, model_id) values ('Tesla',4,4);
 insert into car_make (name, address_id, model_id) values ('Aston Martin',5,1);
 
 
-insert into car (color, licence_plate, make_id, owner_id) values('black', '1-TMC-035', 2, 1);
-insert into car (color, licence_plate, make_id, owner_id) values('silver', 'CHWBCA', 3, 2);
-insert into car (color, licence_plate, make_id, owner_id) values('midnight blue', '1-AZE-645', 2, 3);
-insert into car (color, licence_plate, make_id, owner_id) values('satin', '1-WDF-024', 2, 4);
-insert into car (color, licence_plate, make_id, owner_id) values('white', '1-GSD-645', 2, 5);
+insert into car (color, license_plate, make_id, owner_id) values('black', '1-TMC-035', 2, 1);
+insert into car (color, license_plate, make_id, owner_id) values('silver', 'CHWBCA', 3, 2);
+insert into car (color, license_plate, make_id, owner_id) values('midnight blue', '1-AZE-645', 2, 3);
+insert into car (color, license_plate, make_id, owner_id) values('satin', '1-WDF-024', 2, 4);
+insert into car (color, license_plate, make_id, owner_id) values('white', '1-GSD-645', 2, 5);

@@ -15,7 +15,7 @@ public class Car {
     private CarMake make;
 
 
-    private String licencePlate;
+    private String licensePlate;
 
     @OneToOne
     private CarOwner owner;
@@ -47,12 +47,12 @@ public class Car {
         return id;
     }
 
-    public String getLicencePlate() {
-        return licencePlate;
+    public String getLicensePlate() {
+        return licensePlate;
     }
 
-    public void setLicencePlate(String licencePlate) {
-        this.licencePlate = licencePlate;
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
     }
 
     public CarOwner getOwner() {

@@ -5,9 +5,7 @@ import be.vdab.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.MediaType.*;
@@ -48,4 +46,24 @@ public class CarService {
     public void deleteById(@PathVariable("carId") int id)   {
         carRepository.delete(id);
     }
+
+    @RequestMapping(value="/update", method = PUT, consumes = APPLICATION_JSON_VALUE)
+    public ResponseEntity update(@RequestBody Car car)  {
+        carRepository.save(car);
+        HttpHeaders header = new HttpHeaders();
+        header.add("Location", "http://localhost:8080/car/id/" + car.getId());
+        return new ResponseEntity(header, HttpStatus.CREATED);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
