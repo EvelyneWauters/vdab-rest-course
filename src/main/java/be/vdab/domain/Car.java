@@ -14,8 +14,6 @@ public class Car {
     @ManyToOne
     private CarMake make;
 
-    @ManyToOne
-    private CarModel model;
 
     private String licencePlate;
 
@@ -47,15 +45,6 @@ public class Car {
 
     public Integer getId() {
         return id;
-    }
-
-
-    public CarModel getModel() {
-        return model;
-    }
-
-    public void setModel(CarModel model) {
-        this.model = model;
     }
 
     public String getLicencePlate() {

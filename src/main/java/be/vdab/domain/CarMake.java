@@ -17,6 +17,9 @@ public class CarMake {
     @ManyToOne
     private MyAddress address;
 
+    @ManyToOne
+    private CarModel model;
+
     //Constructor
     public CarMake() {
     }
@@ -36,6 +39,14 @@ public class CarMake {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public CarModel getModel() {
+        return model;
+    }
+
+    public void setModel(CarModel model) {
+        this.model = model;
     }
 
     //Other Methods
