@@ -1,9 +1,6 @@
 package be.vdab.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by Evelyne on 06/07/15.
@@ -11,22 +8,28 @@ import javax.persistence.Id;
 
 @Entity
 public class Car {
-
+    //Field variables
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String color;
-    private String make;
+
+    @OneToOne
+    private CarMake make;
+
+    @OneToOne
     private CarModel model;
+
 //    private CarOwner owner;
 
 
 
-
+    //Constructor
     public Car() {
     }
 
+    //Getters & Setters
     public String getMake() {
         return make;
     }
@@ -49,7 +52,7 @@ public class Car {
 
 
 
-
+    //Other methods & Overrides
     @Override
     public String toString() {
         return "Car{" +

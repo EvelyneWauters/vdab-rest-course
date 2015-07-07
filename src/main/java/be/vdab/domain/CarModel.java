@@ -1,12 +1,20 @@
 package be.vdab.domain;
 
-/**
- * Created by Evelyne on 07/07/15.
- */
+import javax.persistence.*;
+
+@Entity
 public class CarModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     private int pk;
+
+    @Enumerated(EnumType.STRING)
     private EngineType engineType;
 
+    //Constructors
     public CarModel(EngineType engineType, int pk) {
         this.engineType = engineType;
         this.pk = pk;
@@ -15,6 +23,7 @@ public class CarModel {
     public CarModel() {
     }
 
+    //Getters & Setters
     public EngineType getEngineType() {
         return engineType;
     }
@@ -29,5 +38,15 @@ public class CarModel {
 
     public void setPk(int pk) {
         this.pk = pk;
+    }
+
+    //Other methods
+
+    @Override
+    public String toString() {
+        return "CarModel{" +
+                "engineType=" + engineType +
+                ", pk=" + pk +
+                '}';
     }
 }
