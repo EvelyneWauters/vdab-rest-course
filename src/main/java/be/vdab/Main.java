@@ -21,29 +21,9 @@ import java.util.List;
 @SpringBootApplication
 public class Main extends WebMvcConfigurerAdapter{
 
-    @Override
-    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        super.configureMessageConverters(converters);
-        //converters.add(new CarMessageConverter());
-    }
-
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(Main.class);
     }
 
 
-    @Bean
-    public DataSource dataSource()   {
-        return new DriverManagerDataSource("jdbc:mysql://localhost:3306/cars", "root","");
-    }
-
-
-    @Bean
-    public JpaVendorAdapter vendorAdapter() {
-        HibernateJpaVendorAdapter hibernateJpaVendorAdapter = new HibernateJpaVendorAdapter();
-        hibernateJpaVendorAdapter.setShowSql(false);
-        hibernateJpaVendorAdapter.setGenerateDdl(true);
-        hibernateJpaVendorAdapter.setDatabase(Database.MYSQL);
-        return hibernateJpaVendorAdapter;
-    }
 }
