@@ -9,6 +9,8 @@ public class CarModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    private String name;
+
     private int pk;
 
     @Enumerated(EnumType.STRING)
@@ -40,12 +42,23 @@ public class CarModel {
         this.pk = pk;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     //Other methods
+
 
     @Override
     public String toString() {
         return "CarModel{" +
                 "engineType=" + engineType +
+                ", id=" + id +
+                ", name='" + name + '\'' +
                 ", pk=" + pk +
                 '}';
     }

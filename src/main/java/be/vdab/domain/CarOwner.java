@@ -1,15 +1,23 @@
 package be.vdab.domain;
 
-/**
- * Created by Evelyne on 07/07/15.
- */
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+
+@Entity
 public class CarOwner {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String firstName;
-    private String lastName;
-    private MyAddress address;
 
+    private String firstName;
+
+    private String lastName;
+
+    @OneToOne
+    private MyAddress myAddress;
 
 
     //Constructor
@@ -17,12 +25,12 @@ public class CarOwner {
     }
 
     //Getters & Setters
-    public MyAddress getAddress() {
-        return address;
+    public MyAddress getMyAddress() {
+        return myAddress;
     }
 
-    public void setAddress(MyAddress address) {
-        this.address = address;
+    public void setMyAddress(MyAddress myAddress) {
+        this.myAddress = myAddress;
     }
 
     public String getFirstName() {

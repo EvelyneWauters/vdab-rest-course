@@ -14,21 +14,22 @@ public class MyAddress {
     private String city;
     private String postCode;
 
-    //Constructor
-    public MyAddress() {
-    }
 
 
     /**
      * Constructor
      */
-    public String getCity() {
-        return city;
+    public MyAddress() {
     }
+
 
     /**
      * Getters & Setters
      */
+    public String getCity() {
+        return city;
+    }
+
     public void setCity(String city) {
         this.city = city;
     }

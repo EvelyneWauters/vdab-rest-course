@@ -1,10 +1,6 @@
 package be.vdab.domain;
-
 import javax.persistence.*;
 
-/**
- * Created by Evelyne on 06/07/15.
- */
 
 @Entity
 public class Car {
@@ -21,7 +17,10 @@ public class Car {
     @ManyToOne
     private CarModel model;
 
-//    private CarOwner owner;
+    private String licencePlate;
+
+    @OneToOne
+    private CarOwner owner;
 
 
 
@@ -57,6 +56,22 @@ public class Car {
 
     public void setModel(CarModel model) {
         this.model = model;
+    }
+
+    public String getLicencePlate() {
+        return licencePlate;
+    }
+
+    public void setLicencePlate(String licencePlate) {
+        this.licencePlate = licencePlate;
+    }
+
+    public CarOwner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(CarOwner owner) {
+        this.owner = owner;
     }
 
     //Other methods & Overrides

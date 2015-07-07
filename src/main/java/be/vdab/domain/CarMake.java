@@ -12,7 +12,9 @@ public class CarMake {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToOne
+    private String name;
+
+    @ManyToOne
     private MyAddress address;
 
     //Constructor
