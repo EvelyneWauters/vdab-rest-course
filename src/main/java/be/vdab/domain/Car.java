@@ -17,25 +17,22 @@ public class Car {
     private Integer id;
 
     private String color;
-    private String brand;
-    private String model;
+    private String make;
+    private CarModel model;
+//    private CarOwner owner;
 
 
-    public Car(String brand, String color, String model) {
-        this.brand = brand;
-        this.color = color;
-        this.model = model;
-    }
+
 
     public Car() {
     }
 
-    public String getBrand() {
-        return brand;
+    public String getMake() {
+        return make;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setMake(String make) {
+        this.make = make;
     }
 
     public String getColor() {
@@ -51,21 +48,13 @@ public class Car {
     }
 
 
-    public String getModel() {
-        return model;
-    }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
 
     @Override
     public String toString() {
         return "Car{" +
-                "brand='" + brand + '\'' +
+                "make='" + make + '\'' +
                 ", id=" + id +
-                ", color='" + color + '\'' +
-                ", model='" + model + '\'' +
-                '}';
+                ", color='" + color +"}";
     }
 }
